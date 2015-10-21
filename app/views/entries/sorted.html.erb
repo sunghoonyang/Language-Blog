@@ -2,7 +2,7 @@
 <br><br><br>
 <% @entries.each do |e| %>
 	<%= Entry.titles.fetch(e.language) %> : 
-	<% File.open(Rails.root.to_s + "/assets/text/" + e.language + 
+	<% File.open('.' + Rails.root.to_s + "/assets/text/" + e.language + 
 					 "/" + e.name + ".txt", "rt").each(sep="\n") do |line| %>
 	<%= line %>
 	<br>
