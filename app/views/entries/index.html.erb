@@ -2,7 +2,7 @@
 <a href="/es">Español</a>
 <a href="/cn">中文</a>
 <a href="/ko">우리말</a>
-<br><br><br>
+<br><br>
 
 <% Entry.order('created_at DESC').each do |e| %>
 	<%= simple_format e.text %>
