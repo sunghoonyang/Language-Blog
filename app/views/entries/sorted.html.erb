@@ -1,12 +1,8 @@
 <a href="/">Home</a>
 <br><br><br>
 <% @entries.each do |e| %>
-	<%= Entry.titles.fetch(e.language) %> : 
-	<% File.open(Rails.root.to_s + "/app/assets/text/" + e.language + 
-					 "/" + e.name + ".txt", "rt").each(sep="\n") do |line| %>
-	<%= line %>
-	<br>
-	<% end %>				 
+	<%= simple_format e.text %>
+	<br>		 
 	<br>
 	<%= e.created_at %>
 	<br><br>
