@@ -5,13 +5,8 @@
 <br><br><br>
 
 <% Entry.order('created_at DESC').each do |e| %>
-	<%= Entry.titles.fetch(e.language) %> : 
-	<% File.open(Rails.root.to_s + "/app/assets/text/" + e.language + 
-					 "/" + e.name + ".txt", "rt").each(sep="\n") do |line| %>
-	<%= line %>
+	<%= simple_format e.text %>
 	<br>
-	<% end %>	
+<% end %>	
 	<br><br>
-<% end %>
 
-File.open(Rails.root.to_s + "/assets/text/es/1.txt", "rt").each(sep="\n") do {|x| return x}
