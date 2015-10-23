@@ -5,11 +5,8 @@
 <br><br><br>
 
 <% Entry.order('created_at DESC').each do |e| %>
-	<%= Entry.titles.fetch(e.language) %> : 
-	<%= simple_format @e.text %>
-	<%= line %>
+	<%= simple_format e.text %>
 	<br>
-	<% end %>	
+<% end %>	
 	<br><br>
-<% end %>
 
