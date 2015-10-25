@@ -10,4 +10,7 @@ class EntriesController < ApplicationController
 	def sorted
 		@entries = Entry.where(language: params[:language]).all.order('created_at DESC')
 	end
+	def gallery
+		render "entries/gallery"
+	end
 end
