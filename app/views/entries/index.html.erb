@@ -1,13 +1,21 @@
-<a href="/en">English</a>
-<a href="/es">Español</a>
-<a href="/cn">中文</a>
-<a href="/ko">우리말</a>
-<a href="/gallery">Data Analysis</a>
-<br><br>
-
-<% Entry.order('created_at DESC').each do |e| %>
-	<%= simple_format e.text %>
-	<br>
-<% end %>	
-	<br><br>
-
+<div id="main-container" class="container">
+	<div id = "row">
+		<div class="content">
+			<ol class="breadcrumb">
+			 	<li><a href="/en">English</a></li>
+			 	<li><a href="/es">Español</a></li>
+				<li><a href="/cn">中文</a></li>
+				<li><a href="/ko">우리말</a></li>
+				<li><a href="/gallery">Data Analysis</a></li>
+			</ol>
+		</div>
+	</div>
+	<% Entry.order('created_at DESC').each do |e| %>
+		<div class="row">
+			<div id="content">
+				<%= simple_format e.text %>		 
+			</div>
+			<%= e.created_at %>
+		</div><br>
+	<% end %>	
+</div>

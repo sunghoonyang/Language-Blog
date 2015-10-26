@@ -1,9 +1,14 @@
-<a href="/">Home</a>
-<br><br>
-<% @entries.each do |e| %>
-	<%= simple_format e.text %>
-	<br>		 
-	<br>
-	<%= e.created_at %>
-	<br><br>
-<% end %>
+<div id = "main-container" class = "container">
+<br><div id="row">
+		<a href="/" class="btn btn-info" role="button">Home</a>
+	</div><br><br>
+	<% @entries.each do |e| %>
+		<div id = "row">
+			<div class = "content">
+				<%= simple_format e.text %>
+				<br>		 
+				<%= e.created_at %>
+			</div>
+		</div>
+	<% end %>
+</div>
