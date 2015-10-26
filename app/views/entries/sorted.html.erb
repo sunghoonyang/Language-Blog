@@ -5,10 +5,9 @@
 	<% @entries.each do |e| %>
 		<div id = "row">
 			<div class = "content">
-				<%= simple_format e.text %>
-				<br>		 
-				<%= e.created_at %>
-			</div>
+				<%= simple_format e.text %> 	
+			</div>				
+			<%= e.created_at %><br>	
 		</div>
 	<% end %>
 </div>
