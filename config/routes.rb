@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :entries
   root 'entries#index'
   get "/gallery", to: "entries#gallery"
+  get "/about", to:"entries#about"
   get "/:language", to: "entries#sorted"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
